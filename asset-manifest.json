@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/swaggerPetStoreReact/static/css/main.acdcf63a.chunk.css",
-    "main.js": "/swaggerPetStoreReact/static/js/main.944bd827.chunk.js",
-    "main.js.map": "/swaggerPetStoreReact/static/js/main.944bd827.chunk.js.map",
+    "main.js": "/swaggerPetStoreReact/static/js/main.28613d0d.chunk.js",
+    "main.js.map": "/swaggerPetStoreReact/static/js/main.28613d0d.chunk.js.map",
     "runtime-main.js": "/swaggerPetStoreReact/static/js/runtime-main.6d5a713a.js",
     "runtime-main.js.map": "/swaggerPetStoreReact/static/js/runtime-main.6d5a713a.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/swaggerPetStoreReact/static/css/2.20aa2d7b.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.64b6c647.chunk.js",
     "static/css/main.acdcf63a.chunk.css",
-    "static/js/main.944bd827.chunk.js"
+    "static/js/main.28613d0d.chunk.js"
   ]
 }
