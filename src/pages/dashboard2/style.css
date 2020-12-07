@@ -1,0 +1,18 @@
+body {
+    background-color: #11263b;
+}
+
+.header {
+    background-color: #11263b;
+    width: auto;
+    padding: 10px 0px 10px 0px;
+}
+
+p {
+    font-size: large;
+}
+
+.td {
+    padding: .0rem;
+    vertical-align: none;
+}
