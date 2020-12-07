@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Route path="/" exact component={Dashboard} />
+      <Route path="/swaggerPetStoreReact" exact component={Dashboard} />
       <Route path="/dashboard2" exact component={Dashboard2} />
     </Router>
   );
