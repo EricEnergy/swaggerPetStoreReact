@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/swaggerPetStoreReact/static/css/main.acdcf63a.chunk.css",
-    "main.js": "/swaggerPetStoreReact/static/js/main.14e9b70c.chunk.js",
-    "main.js.map": "/swaggerPetStoreReact/static/js/main.14e9b70c.chunk.js.map",
+    "main.css": "/swaggerPetStoreReact/static/css/main.95ccec14.chunk.css",
+    "main.js": "/swaggerPetStoreReact/static/js/main.ffeedfd0.chunk.js",
+    "main.js.map": "/swaggerPetStoreReact/static/js/main.ffeedfd0.chunk.js.map",
     "runtime-main.js": "/swaggerPetStoreReact/static/js/runtime-main.6d5a713a.js",
     "runtime-main.js.map": "/swaggerPetStoreReact/static/js/runtime-main.6d5a713a.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/swaggerPetStoreReact/static/css/2.20aa2d7b.chunk.css",
@@ -12,14 +12,14 @@
     "static/js/3.df46141b.chunk.js.map": "/swaggerPetStoreReact/static/js/3.df46141b.chunk.js.map",
     "index.html": "/swaggerPetStoreReact/index.html",
     "static/css/2.20aa2d7b.chunk.css.map": "/swaggerPetStoreReact/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.acdcf63a.chunk.css.map": "/swaggerPetStoreReact/static/css/main.acdcf63a.chunk.css.map",
+    "static/css/main.95ccec14.chunk.css.map": "/swaggerPetStoreReact/static/css/main.95ccec14.chunk.css.map",
     "static/js/2.b2acb522.chunk.js.LICENSE.txt": "/swaggerPetStoreReact/static/js/2.b2acb522.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6d5a713a.js",
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.b2acb522.chunk.js",
-    "static/css/main.acdcf63a.chunk.css",
-    "static/js/main.14e9b70c.chunk.js"
+    "static/css/main.95ccec14.chunk.css",
+    "static/js/main.ffeedfd0.chunk.js"
   ]
 }
