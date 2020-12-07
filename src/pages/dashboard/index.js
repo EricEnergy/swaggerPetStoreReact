@@ -18,7 +18,7 @@ function Dashboard() {
         init();
     }, []);
 
-    //Render table rows
+    //Render table rows plus store index number in a data custom attribute 
     //Line 29 Check if category is available then check if data.category.name (new feature es8)
     const renderTable = () => {
         return inventoryList.map((data, index) => {
@@ -45,6 +45,7 @@ function Dashboard() {
 
     return (
         <Fragment>
+            <h4 className="text-center">Functional Component </h4>
             <Table striped bordered hover variant="dark">
                 <thead>
                     <tr>

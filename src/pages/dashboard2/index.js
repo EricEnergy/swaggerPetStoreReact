@@ -51,6 +51,7 @@ class Dashboard2 extends Component {
     render() {
         return (
             <Fragment>
+            <h4 className="text-center">Class Component </h4>
                 <Table striped bordered hover variant="dark">
                     <thead>
                         <tr>

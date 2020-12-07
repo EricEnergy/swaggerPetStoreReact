@@ -4,6 +4,16 @@ body {
     background-color: #11263b;
 }
 
+#root {
+    background-color: #11263b;
+    height: auto;
+}
+
+.h4, h4 {
+    color: rgb(250, 250, 244);
+    margin: auto;
+}
+
 .header {
     background-color: #11263b;
     width: auto;
