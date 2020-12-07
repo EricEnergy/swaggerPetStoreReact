@@ -1,16 +1,18 @@
 import React from "react";
 import "./style.css";
 import { Navbar, Nav } from 'react-bootstrap';
+import { HashRouter as  Link } from "react-router-dom";
+
 
 function NavBar() {
 
     return (
         <Navbar bg="dark" variant="dark">
-            <Navbar.Brand href="/">Pet Store</Navbar.Brand>
+            <Navbar.Brand >Pet Store</Navbar.Brand>
             <Nav className="mr-auto">
-                <Nav.Link href="/">Dashboard (Functional)  </Nav.Link>
+                <Link to="/">Dashboard (Functional)  </Link>
                 <Nav.Link disabled href="null">|</Nav.Link>
-                <Nav.Link href="/dashboard2">Dashboard (Class)</Nav.Link>
+                <Link to="/dashboard2">Dashboard (Class)</Link>
             </Nav>
         </Navbar>
     );

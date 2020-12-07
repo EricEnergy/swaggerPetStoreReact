@@ -8,8 +8,8 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Route path="/swaggerPetStoreReact" exact component={Dashboard} />
-      <Route path="/dashboard2" exact component={Dashboard2} />
+      <Route exact path="/" component={Dashboard} />
+      <Route path="/dashboard2" component={Dashboard2} />
     </Router>
   );
 }
