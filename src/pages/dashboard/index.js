@@ -28,7 +28,7 @@ function Dashboard() {
                 <td>{data.name ? data.name : "N/A"}</td>
                 <td>{data.category?.name ? data.category.name : "N/A"}</td>
                 <td>{data.status}</td>
-                <td><Button data-id={index} variant={data.status === "available" ? "primary" : "secondary"} onClick={onButtonChange}>{data.status === "available" ? "Purchase" : "Sold"}</Button></td>
+                <td><Button data-id={index} variant={data.status === "available" ? "primary" : "secondary" } disabled={data.status === "available" ? false : true} onClick={onButtonChange}>{data.status === "available" ? "Purchase" : "Purchased"}</Button></td>
             </tr>
         })
     };
@@ -45,7 +45,6 @@ function Dashboard() {
 
     return (
         <Fragment>
-            <h4 className="text-center">Functional Component </h4>
             <Table striped bordered hover variant="dark">
                 <thead>
                     <tr>

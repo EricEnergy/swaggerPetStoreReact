@@ -33,7 +33,7 @@ class Dashboard2 extends Component {
                 <td>{data.name ? data.name : "N/A"}</td>
                 <td>{data.category?.name ? data.category.name : "N/A"}</td>
                 <td>{data.status}</td>
-                <td><Button data-id={index} variant={data.status === "available" ? "primary" : "secondary"} onClick={this.onButtonChange}>{data.status === "available" ? "Purchase" : "Sold"}</Button></td>
+                <td><Button data-id={index} variant={data.status === "available" ? "primary" : "secondary" } disabled={data.status === "available" ? false : true} onClick={this.onButtonChange}>{data.status === "available" ? "Purchase" : "Purchased"}</Button></td>
             </tr>
         })
     };
@@ -51,7 +51,6 @@ class Dashboard2 extends Component {
     render() {
         return (
             <Fragment>
-            <h4 className="text-center">Class Component </h4>
                 <Table striped bordered hover variant="dark">
                     <thead>
                         <tr>
@@ -60,7 +59,7 @@ class Dashboard2 extends Component {
                             <th>Name</th>
                             <th>Catagory</th>
                             <th>Status</th>
-                            <th>Button</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
