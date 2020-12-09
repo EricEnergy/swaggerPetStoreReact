@@ -9,7 +9,6 @@ function NavBar(props) {
     const [positionColor, setPositionColor] = useState(true);
 
     useEffect(() => {
-        console.log(props)
         if (props.location === "dashboard1") {
             setPositionColor(true)
         } else {
