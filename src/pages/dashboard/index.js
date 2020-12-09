@@ -1,4 +1,5 @@
 import React, { useState, useEffect, Fragment } from "react";
+import Navbar from '../../components/Navbar';
 import "./style.css";
 import { getInventory } from '../../services/axios';
 import { Button, Table } from 'react-bootstrap';
@@ -8,7 +9,7 @@ function Dashboard() {
     const [loading, setLoading] = useState(true);
 
     // Start up function which calls the API and sets data into state
-    // Line 14 I send "available" in case we want to see "pending", or "sold" later on
+    // Line 15 I send "available" in case we want to see "pending", or "sold" later on
     useEffect(() => {
         async function init() {
             const inventory = await getInventory("available");
@@ -19,7 +20,7 @@ function Dashboard() {
     }, []);
 
     //Render table rows plus store index number in a data custom attribute 
-    //Line 29 Check if category is available then check if data.category.name (new feature es8)
+    //Line 30 Check if category is available then check if data.category.name (new feature es8)
     const renderTable = () => {
         return inventoryList.map((data, index) => {
             return <tr key={index}>
@@ -33,7 +34,7 @@ function Dashboard() {
         })
     };
 
-    //Onclick event for purchase
+    //Onclick event to purchase
     const onButtonChange = (e) => {
         const newInventoryList = [...inventoryList];
         const id = parseInt(e.target.dataset.id);
@@ -45,6 +46,7 @@ function Dashboard() {
 
     return (
         <Fragment>
+            <Navbar location={"dashboard1"}/>
             <Table striped bordered hover variant="dark">
                 <thead>
                     <tr>

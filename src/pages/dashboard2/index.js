@@ -2,6 +2,7 @@ import React, { Fragment, Component } from "react";
 import "./style.css";
 import { getInventory } from '../../services/axios';
 import { Button, Table } from 'react-bootstrap';
+import Navbar from '../../components/Navbar';
 
 class Dashboard2 extends Component {
     constructor(props) {
@@ -13,7 +14,7 @@ class Dashboard2 extends Component {
     };
 
     // Start up function which calls the API and sets data into state
-    // Line 18 I send "available" in case we want to see "pending", or "sold" later on
+    // Line 19 I send "available" in case we want to see "pending", or "sold" later on
     componentDidMount() {
         getInventory("available")
             .then((resp) => resp.data)
@@ -24,7 +25,7 @@ class Dashboard2 extends Component {
     };
 
     //Render table rows
-    //Line 34 Check if category is available then check if data.category.name (new feature es8) There was an id as well so I went with the name for the category
+    //Line 35 Check if category is available then check if data.category.name (new feature es8) There was an id as well so I went with the name for the category
     renderTable = () => {
         return this.state.inventoryList.map((data, index) => {
             return <tr>
@@ -33,12 +34,12 @@ class Dashboard2 extends Component {
                 <td>{data.name ? data.name : "N/A"}</td>
                 <td>{data.category?.name ? data.category.name : "N/A"}</td>
                 <td>{data.status}</td>
-                <td><Button data-id={index} variant={data.status === "available" ? "primary" : "secondary" } disabled={data.status === "available" ? false : true} onClick={this.onButtonChange}>{data.status === "available" ? "Purchase" : "Purchased"}</Button></td>
+                <td><Button data-id={index} variant={data.status === "available" ? "primary" : "secondary"} disabled={data.status === "available" ? false : true} onClick={this.onButtonChange}>{data.status === "available" ? "Purchase" : "Purchased"}</Button></td>
             </tr>
         })
     };
 
-    //Onclick event for purchasing
+    //Onclick event to purchasing
     onButtonChange = (e) => {
         const newInventoryList = [...this.state.inventoryList];
         const id = parseInt(e.target.dataset.id);
@@ -47,10 +48,11 @@ class Dashboard2 extends Component {
 
         this.setState({ inventoryList: newInventoryList });
     };
-    
+
     render() {
         return (
             <Fragment>
+                <Navbar location={"dashboard2"} />
                 <Table striped bordered hover variant="dark">
                     <thead>
                         <tr>

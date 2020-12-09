@@ -3,10 +3,6 @@ a.dash-Class{
     padding: 8px;
 }
 
-p.navLink {
-    margin-bottom: 0px;
-}
-
 a.dash-Class:hover {
     color: rgb(253, 188, 47);
     text-decoration: none
