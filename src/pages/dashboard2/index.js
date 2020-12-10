@@ -30,9 +30,9 @@ class Dashboard2 extends Component {
         return this.state.inventoryList.map((data, index) => {
             return <tr>
                 <td>{index}</td>
-                <td>{data.id}</td>
-                <td ><p className="truncate">{data.name ? data.name : "N/A"}</p></td>
-                <td>{data.category?.name ? data.category.name : "N/A"}</td>
+                {/* <td>{data.id}</td> */}
+                <td><p className="truncate">{data.name ? data.name : "N/A"}</p></td>
+                <td><p className="truncate">{data.category?.name ? data.category.name : "N/A"}</p></td>
                 <td>{data.status}</td>
                 <td><Button data-id={index} variant={data.status === "available" ? "primary" : "secondary"} disabled={data.status === "available" ? false : true} onClick={this.onButtonChange}>{data.status === "available" ? "Purchase" : "Purchased"}</Button></td>
             </tr>
@@ -58,7 +58,7 @@ class Dashboard2 extends Component {
                     <thead>
                         <tr>
                             <th>Index</th>
-                            <th>ID</th>
+                            {/* <th>ID</th> */}
                             <th>Name</th>
                             <th>Catagory</th>
                             <th>Status</th>

@@ -26,8 +26,8 @@ function Dashboard() {
             return <tr key={index}>
                 <td>{index}</td>
                 {/* <td>{data.id}</td> */}
-                <td ><p className="truncate">{data.name ? data.name : "N/A"}</p></td>
-                <td>{data.category?.name ? data.category.name : "N/A"}</td>
+                <td><p className="truncate">{data.name ? data.name : "N/A"}</p></td>
+                <td><p className="truncate">{data.category?.name ? data.category.name : "N/A"}</p></td>
                 <td>{data.status}</td>
                 <td><Button data-id={index} variant={data.status === "available" ? "primary" : "secondary"} disabled={data.status === "available" ? false : true} onClick={onButtonChange}>{data.status === "available" ? "Purchase" : "Purchased"}</Button></td>
             </tr>
