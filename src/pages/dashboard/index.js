@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Fragment } from "react";
 import Navbar from '../../components/Navbar';
 import "./style.css";
-import { getInventory } from '../../services/axios';
+import { getInventory, updatePet } from '../../services/axios';
 import { Button, Table } from 'react-bootstrap';
 
 function Dashboard() {
@@ -26,7 +26,7 @@ function Dashboard() {
             return <tr key={index}>
                 <td>{index}</td>
                 {/* <td>{data.id}</td> */}
-                <td>{data.name ? data.name : "N/A"}</td>
+                <td ><p className="truncate">{data.name ? data.name : "N/A"}</p></td>
                 <td>{data.category?.name ? data.category.name : "N/A"}</td>
                 <td>{data.status}</td>
                 <td><Button data-id={index} variant={data.status === "available" ? "primary" : "secondary" } disabled={data.status === "available" ? false : true} onClick={onButtonChange}>{data.status === "available" ? "Purchase" : "Purchased"}</Button></td>
@@ -35,12 +35,13 @@ function Dashboard() {
     };
 
     //Onclick event to purchase
-    const onButtonChange = (e) => {
+    const onButtonChange = async (e) => {
         const newInventoryList = [...inventoryList];
         const id = parseInt(e.target.dataset.id);
-        const item = newInventoryList.find((item, index) => index === id);
+        const item = await newInventoryList.find((item, index) => index === id);
         item.status = "sold";
-
+        const updatePetInfo = await updatePet(item)
+        console.log(updatePetInfo)
         setInventoryList(newInventoryList);
     };
 

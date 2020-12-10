@@ -23,3 +23,10 @@ p {
     padding: .0rem;
     vertical-align: none;
 }
+
+.truncate {
+    width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
