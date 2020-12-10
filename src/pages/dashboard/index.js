@@ -29,7 +29,7 @@ function Dashboard() {
                 <td ><p className="truncate">{data.name ? data.name : "N/A"}</p></td>
                 <td>{data.category?.name ? data.category.name : "N/A"}</td>
                 <td>{data.status}</td>
-                <td><Button data-id={index} variant={data.status === "available" ? "primary" : "secondary" } disabled={data.status === "available" ? false : true} onClick={onButtonChange}>{data.status === "available" ? "Purchase" : "Purchased"}</Button></td>
+                <td><Button data-id={index} variant={data.status === "available" ? "primary" : "secondary"} disabled={data.status === "available" ? false : true} onClick={onButtonChange}>{data.status === "available" ? "Purchase" : "Purchased"}</Button></td>
             </tr>
         })
     };
@@ -47,7 +47,7 @@ function Dashboard() {
 
     return (
         <Fragment>
-            <Navbar location={"dashboard1"}/>
+            <Navbar location={"dashboard1"} />
             <Table striped bordered hover variant="dark">
                 <thead>
                     <tr>

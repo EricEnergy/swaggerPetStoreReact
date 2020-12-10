@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from "react";
 import "./style.css";
-import { getInventory } from '../../services/axios';
+import { getInventory, updatePet } from '../../services/axios';
 import { Button, Table } from 'react-bootstrap';
 import Navbar from '../../components/Navbar';
 
@@ -30,7 +30,7 @@ class Dashboard2 extends Component {
         return this.state.inventoryList.map((data, index) => {
             return <tr>
                 <td>{index}</td>
-                {/* <td>{data.id}</td> */}
+                <td>{data.id}</td>
                 <td ><p className="truncate">{data.name ? data.name : "N/A"}</p></td>
                 <td>{data.category?.name ? data.category.name : "N/A"}</td>
                 <td>{data.status}</td>
@@ -40,12 +40,13 @@ class Dashboard2 extends Component {
     };
 
     //Onclick event to purchasing
-    onButtonChange = (e) => {
+    onButtonChange = async (e) =>  {
         const newInventoryList = [...this.state.inventoryList];
         const id = parseInt(e.target.dataset.id);
         const item = newInventoryList.find((item, index) => index === id);
         item.status = "sold";
-
+        const updatePetInfo = await updatePet(item)
+        console.log(updatePetInfo)
         this.setState({ inventoryList: newInventoryList });
     };
 
@@ -57,7 +58,7 @@ class Dashboard2 extends Component {
                     <thead>
                         <tr>
                             <th>Index</th>
-                            {/* <th>ID</th> */}
+                            <th>ID</th>
                             <th>Name</th>
                             <th>Catagory</th>
                             <th>Status</th>
